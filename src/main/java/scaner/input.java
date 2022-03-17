@@ -50,4 +50,22 @@ public class input {
             }
         return equal;
     }
+
+    public static String enterString() {
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        if (scanner.hasNextLine()){
+            word = scanner.nextLine();
+        }
+        return word;
+    }
+
+    public static String[] inputStringToWordsArray() {
+        Scanner scanner = new Scanner(System.in);
+        String data = scanner.nextLine();
+//        data = data.concat(" ");
+        String[] words = data.split(" ");
+        return words;
+    }
+
 }
