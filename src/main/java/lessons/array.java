@@ -1,6 +1,6 @@
-import array.*;
+package lessons;
 
-import java.util.Random;
+import array.*;
 
 
 public class array {

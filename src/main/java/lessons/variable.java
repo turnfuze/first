@@ -1,3 +1,5 @@
+package lessons;
+
 public class variable {
     public static void variable() {
 

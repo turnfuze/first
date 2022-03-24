@@ -1,3 +1,5 @@
+package lessons;
+
 import java.util.Random;
 
 public class numbers {
