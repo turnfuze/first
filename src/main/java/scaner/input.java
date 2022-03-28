@@ -68,4 +68,13 @@ public class input {
         return words;
     }
 
+    public static int enterNumber(){
+        Scanner scanner = new Scanner(System.in);
+        int word = 0;
+        if (scanner.hasNextInt()){
+            word = scanner.nextInt();
+        }
+        return word;
+    }
+
 }
