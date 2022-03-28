@@ -1,4 +1,4 @@
-package array;
+package lessons.array;
 
 public class printArray {
     public static void line(int x[]) {

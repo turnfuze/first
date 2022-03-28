@@ -1,7 +1,7 @@
 package lessons;
 
 public class variable {
-    public static void variable() {
+     private static void variable() {
 
         byte $byte = 127;
         System.out.println($byte);

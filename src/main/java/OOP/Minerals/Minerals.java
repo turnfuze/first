@@ -3,7 +3,7 @@ package OOP.Minerals;
 import OOP.Stonens;
 import java.util.Objects;
 
-import static scaner.input.*;
+import static lessons.scaner.input.*;
 
 public class Minerals extends Stonens {
 

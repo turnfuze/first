@@ -1,4 +1,4 @@
-package array;
+package lessons.array;
 
 public class fillMetods {
     public static int[] createArray(int start, int end, int step, int parity) {

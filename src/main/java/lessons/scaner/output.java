@@ -1,4 +1,4 @@
-package scaner;
+package lessons.scaner;
 
 public class output {
     public static void listOfStutence(String name, int ocenka, String predmet) {

@@ -1,7 +1,6 @@
-package string;
-import java.util.Locale;
+package lessons.string;
 
-import static scaner.input.*;
+import static lessons.scaner.input.*;
 
 public class getInfo {
     public static char lastChar() {
@@ -10,7 +9,7 @@ public class getInfo {
         char symbol = phrase.charAt(number - 1);
         return symbol;
     }
-    public static char lastChar(String phrase) {
+    protected static char lastChar(String phrase) {
         int number = phrase.length();
         char symbol = phrase.charAt(number - 1);
         return symbol;
@@ -22,7 +21,7 @@ public class getInfo {
         return symbol;
     }
 
-    public static boolean endWith (String phrase) {
+    private static boolean endWith (String phrase) {
         boolean symbol = phrase.endsWith("!!!");
         return symbol;
     }
@@ -32,7 +31,7 @@ public class getInfo {
         return symbol;
     }
 
-    public static boolean startWith () {
+     static boolean startWith () {
         String phrase = enterString();
         boolean symbol = phrase.startsWith("I like");
         return symbol;
@@ -69,7 +68,7 @@ public class getInfo {
     public static String lowSymbols(String str){
         return str.toLowerCase();
     }
-    public static void substring(String str){
+    private static void substring(String str){
         System.out.println(str);
     }
 }

@@ -1,4 +1,4 @@
-package string;
+package lessons.string;
 
 public class stringProcessing {
     public static void countSumChars(String[] data) {

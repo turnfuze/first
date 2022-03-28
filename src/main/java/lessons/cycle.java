@@ -7,7 +7,6 @@ public class cycle {
         for(int i = 1000; i < 10000; i +=3){
             System.out.println(i);
         }
-
     }
 
     public static void cycle4() {

@@ -2,6 +2,8 @@ import OOP.Minerals.Minerals;
 import OOP.Minerals.Ruby;
 import OOP.Minerals.Sapphire;
 import OOP.Rocks.Granit;
+import lessons.conditions;
+import lessons.variable;
 
 import java.awt.*;
 
@@ -29,6 +31,8 @@ public class main {
         granit.slice();
         granit.polish();
         granit.throwStone();
+
+
 
     }
 }

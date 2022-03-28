@@ -1,9 +1,8 @@
 package lessons;
+import lessons.array.fillMetods;
+import lessons.array.printArray;
 
-import array.*;
-
-
-public class array {
+public class arraes {
     public static void listShow() {
         int[] x = fillMetods.createArray(2, 20, 2, 2);
         printArray.line(x);

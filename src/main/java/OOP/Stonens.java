@@ -1,7 +1,5 @@
 package OOP;
 
-import static scaner.input.enterString;
-
 public abstract class Stonens {
     public String name;
     public String color;

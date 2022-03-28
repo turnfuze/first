@@ -1,8 +1,6 @@
 package lessons;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class conditions {
     private static Object DecimalFormat;
@@ -44,10 +42,9 @@ public class conditions {
             }
         }
         scanner.close();
-
     }
 
-    public static void vasya(){
+    private static void vasya(){
         float vasyaMoney = 0;
         float parantsMoney = 0;
         Scanner scanner = new Scanner(System.in);
@@ -146,7 +143,6 @@ public class conditions {
         } else if (input > 100 || input < 9){
             System.out.println("Ваше число не двухзначное!");
         }
-
     }
 
     public static void parityDegree() {
