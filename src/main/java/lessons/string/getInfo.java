@@ -49,7 +49,6 @@ public class getInfo {
         }else {
             System.out.println("Фраза " + phrase + " начинается на: " + start);
         }
-
     }
 
     public static String replaceSymbols(String string, char find, char replace){

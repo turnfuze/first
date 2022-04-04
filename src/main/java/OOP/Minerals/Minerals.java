@@ -1,11 +1,13 @@
 package OOP.Minerals;
 
 import OOP.Stonens;
+import polimorphism.interfc.Workable;
+
 import java.util.Objects;
 
 import static lessons.scaner.input.*;
 
-public class Minerals extends Stonens {
+public class Minerals extends Stonens{
 
     public int density;
 
@@ -53,5 +55,4 @@ public class Minerals extends Stonens {
         Minerals mineral = (Minerals) o;
         return Objects.equals(name, mineral.name) && Objects.equals(color, mineral.color) && Objects.equals(density, mineral.density);
     }
-
 }

@@ -7,9 +7,7 @@ public class arraes {
         int[] x = fillMetods.createArray(2, 20, 2, 2);
         printArray.line(x);
         printArray.column(x);
-
     }
-
 
     public static void addNumbers() {
         int[] x = fillMetods.createArray(1, 99, 2, 1);
@@ -19,10 +17,8 @@ public class arraes {
     }
 
     public static void twoArraes() {
-
         int numberFirst = numbers.random(5);
         int numberSecond = numbers.random(5);
-
         int[] arrayFirst = fillMetods.createArray(1,numberFirst,1,1);
         int[] arraySecond = fillMetods.createArray(1,numberSecond,1,1);
 
@@ -36,6 +32,5 @@ public class arraes {
         System.out.println("Summ numbers in second array = " + fillMetods.getSummArray(arraySecond));
 
         printArray.comparison(firstArray,secondArray);
-
     }
 }

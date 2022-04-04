@@ -13,9 +13,7 @@ public class output {
         str.replace(36,40, " по ");
         str.replace(41,51,predmet);
 
-
         System.out.println(str);
-
     }
 
     public static void listOfStutence(String[] data) {
