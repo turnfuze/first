@@ -1,21 +1,22 @@
 package OOP.Rocks;
 
+import OOP.Stoneable;
 import OOP.Stonens;
 
 public class Rock extends Stonens {
-    public String texture;
-    public String secondColor;
+
+    public String includedMetal;
 
 
-    public Rock(String name, String color, String secondColor, String texture) {
+    public Rock(String name, String color, String includedMetal) {
         super(name, color);
-        this.texture = texture;
-        this.secondColor = secondColor;
+
+        this.includedMetal = includedMetal;
     }
 
     @Override
     public String toString() {
 
-        return String.format("Name: %s, Color: %s, SecondColor: %s, Texture: %s" , name, color,secondColor,texture );
+        return String.format("Name: %s, Color: %s, SecondColor: %s, Texture: %s", name, color);
     }
 }

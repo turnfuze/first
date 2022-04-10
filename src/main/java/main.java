@@ -1,20 +1,11 @@
-import OOP.Minerals.Minerals;
-import OOP.Minerals.Ruby;
-import OOP.Minerals.Sapphire;
-import OOP.Rocks.Granit;
-import lessons.conditions;
-import lessons.variable;
-import polimorphism.abstrct.Boy;
-import polimorphism.interfc.Workable;
-
-import java.awt.*;
+import OOP.Rocks.Gematit;
 
 public class main {
 
     public static void main(String[] args) {
 
-    Boy ivan = new Boy("Ваня", "Math");
-    ivan.eat();
-    ivan.boom();
+        Gematit rock = new Gematit("Gematit", "Red", "Iron", 1.5f);
+        rock.melting(rock);
+
     }
 }
