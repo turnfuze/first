@@ -1,5 +1,7 @@
 package lessons.scaner;
 
+import educationalCenter.subject.Subject;
+
 import java.util.Scanner;
 
 public class input {
@@ -7,17 +9,17 @@ public class input {
         System.out.println("Enter your first number: ");
         int x = 0;
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextInt()){
+        if (scanner.hasNextInt()) {
             x = scanner.nextInt();
         }
         return x;
     }
 
-    public static char getOperation(){
+    public static char getOperation() {
         System.out.println("Enter your operation: ");
         String x = null;
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextLine()){
+        if (scanner.hasNextLine()) {
             x = scanner.nextLine();
             System.out.println(x);
         }
@@ -43,14 +45,14 @@ public class input {
             case 'x':
                 equal = num1 * num2;
                 break;
-            }
+        }
         return equal;
     }
 
     public static String enterString() {
         Scanner scanner = new Scanner(System.in);
         String word = "";
-        if (scanner.hasNextLine()){
+        if (scanner.hasNextLine()) {
             word = scanner.nextLine();
         }
         return word;
@@ -64,12 +66,26 @@ public class input {
         return words;
     }
 
-    public static int enterNumber(){
+    public static int enterNumber() {
         Scanner scanner = new Scanner(System.in);
         int word = 0;
-        if (scanner.hasNextInt()){
+        if (scanner.hasNextInt()) {
             word = scanner.nextInt();
         }
         return word;
+    }
+
+    public static Subject enterSubject() {
+        String subject = null;
+        int hours = 0;
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNextLine()) {
+            subject = scanner.nextLine();
+        }
+        if (scanner.hasNextInt()) {
+            hours = scanner.nextInt();
+        }
+        Subject subject1 = new Subject(subject, hours);
+        return subject1;
     }
 }
