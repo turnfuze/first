@@ -19,7 +19,7 @@ public class Subject {
 
     @Override
     public String toString() {
-        return "\n" +"    "+ subject +
+        return "\n" +"    "+ subject +" - "+
                 hours + " hours";
     }
 }
