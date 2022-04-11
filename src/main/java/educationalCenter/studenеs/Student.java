@@ -11,10 +11,10 @@ public class Student {
     private Subject[] subject;
     private Days[] workerDays;
 
-//    public Student(String name, String group) {
-//        this.name = name;
-//        this.group = group;
-//    }
+    public Student(String name, String group) {
+        this.name = name;
+        this.group = group;
+    }
 
     public Student(String name, Subject[] subject, Days[] workerDays) {
         this.name = name;
