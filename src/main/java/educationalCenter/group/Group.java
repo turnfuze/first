@@ -5,7 +5,7 @@ import educationalCenter.teacher.Teacher;
 
 import java.util.Arrays;
 
-public abstract class Group {
+public class Group {
 
     private String nameGroup;
     private Student[] students;
@@ -20,6 +20,10 @@ public abstract class Group {
     public Group(String nameGroup, Student[] students) {
         this.nameGroup = nameGroup;
         this.students = students;
+    }
+
+    public Group(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     public String getNameGroup() {
@@ -48,10 +52,8 @@ public abstract class Group {
 
     @Override
     public String toString() {
-        return "Group{" +
-                "nameGroup='" + nameGroup + '\'' +
-                ", students=" + Arrays.toString(students) +
-                ", teacher=" + teacher +
-                '}';
+        return "Group: " + nameGroup  +
+                "\n students: " + Arrays.toString(students) +
+                "\n teacher: " + teacher;
     }
 }
