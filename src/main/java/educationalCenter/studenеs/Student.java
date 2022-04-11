@@ -1,5 +1,6 @@
 package educationalCenter.studenеs;
 
+import educationalCenter.Days;
 import educationalCenter.subject.Subject;
 
 import java.util.Arrays;
@@ -8,15 +9,17 @@ public class Student {
     private String name;
     private String group;
     private Subject[] subject;
+    private Days[] workerDays;
 
-//    public Student(String name, String group) {
-//        this.name = name;
-//        this.group = group;
-//    }
+    public Student(String name, String group) {
+        this.name = name;
+        this.group = group;
+    }
 
-    public Student(String name, Subject[] subject) {
+    public Student(String name, Subject[] subject, Days[] workerDays) {
         this.name = name;
         this.subject = subject;
+        this.workerDays = workerDays;
     }
 
     public String getName() {
