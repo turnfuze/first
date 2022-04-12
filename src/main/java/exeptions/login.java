@@ -1,23 +1,18 @@
 package exeptions;
 
-import static lessons.scaner.input.enterString;
+import static exeptions.ConfirmPassword.confirmPassword;
+import static exeptions.LoginExeption.checkLogin;
+import static exeptions.PasswordExeption.checkPassword;
 
 public class login {
     public static void main(String[] args) {
-        boolean check = false;
-        System.out.println("Your login should contain: a-z, '_' ");
-        try{
-            String login;
-            login = enterString();
-            if(!login.contains("_")) {
-                throw new Exeptions("Your login is not contain needed chars 0", "WrongLoginException");
-            }
-            if (login.equals("password_")){
-                throw new Exeptions("Your login is not contain needed chars 5", "WrongLoginException");
-            }
-        } catch (Exeptions e) {
-            System.out.println(e.getTitle()+ "\n" + e.getMessage()  );
-
+        boolean bool = true;
+        String pass = null;
+        checkLogin();
+        while (bool) {
+            pass = checkPassword();
+            bool = confirmPassword(pass);
         }
+        System.out.println("Completed");
     }
 }
