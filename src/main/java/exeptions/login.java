@@ -1,18 +1,25 @@
 package exeptions;
 
-import static exeptions.ConfirmPassword.confirmPassword;
-import static exeptions.LoginExeption.checkLogin;
-import static exeptions.PasswordExeption.checkPassword;
+import static exeptions.loginSteps.checkCredentials;
 
 public class login {
     public static void main(String[] args) {
-        boolean bool = true;
-        String pass = null;
-        checkLogin();
-        while (bool) {
-            pass = checkPassword();
-            bool = confirmPassword(pass);
+        boolean confirmBool = false;
+
+        try {
+           confirmBool = checkCredentials();
+        } catch (LoginExeption loginExeption) {
+            System.out.println(loginExeption.getTitle() + " " + loginExeption.getMessage());
+        } catch (PasswordExeption passwordExeption) {
+            System.out.println(passwordExeption.getTitle() + " " + passwordExeption.getMessage());
+        } catch (ConfirmPassword confirmPassword) {
+            System.out.println(confirmPassword.getTitle() + " " + confirmPassword.getMessage());
         }
-        System.out.println("Completed");
+
+        if (confirmBool){
+            System.out.println("Completed");
+        }else {
+            System.out.println("ERROR");
+        }
     }
 }
