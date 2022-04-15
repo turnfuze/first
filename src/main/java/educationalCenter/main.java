@@ -4,23 +4,42 @@ import educationalCenter.group.Group;
 import educationalCenter.studenеs.Student;
 import educationalCenter.subject.Subject;
 import educationalCenter.teacher.Teacher;
+
+import java.util.HashSet;
+import java.util.Set;
+
 import static educationalCenter.Days.*;
 
 public class main {
     public static void main(String[] args) {
+//        ArrayList subjectsOleg = new ArrayList<>();
+//        subjectsOleg.add("Math");
+//        subjectsOleg.add("Chemistry");
+//        subjectsOleg.add("Physic");
+
         Subject math = new Subject("Math", 24);
         Subject chemistry = new Subject("Chemistry",52);
         Subject physic = new Subject("Physic", 56);
+        Subject draw = new Subject("Draw", 2);
 
-        Days workerDaysOleg[] = new Days[]{MONDAY,TUESDAY,THURSDAY};
+        Set<Subject> olegSubjects = new HashSet<>();
+        olegSubjects.add(math);
+        olegSubjects.add(chemistry);
+        olegSubjects.add(physic);
+
+        Set<Subject> nikaSubjects = new HashSet<>();
+        nikaSubjects.addAll(olegSubjects);
+        nikaSubjects.add(draw);
+
+        Days workerDaysOleg[] = new Days[]{MONDAY, TUESDAY, THURSDAY};
         Days workerDaysNika[] = new Days[]{MONDAY, WEDNESDAY, FRIDAY};
-        Days workout[] = new Days[]{THURSDAY,SUNDAY};
+        Days workout[] = new Days[]{THURSDAY, SUNDAY};
 
-        Student oleg = new Student("Oleg",new Subject[]{math,physic,chemistry}, workout);
-        Student nika = new Student("Nika", new Subject[]{physic,chemistry}, workerDaysNika);
+        Student oleg = new Student("Oleg", olegSubjects, workout);
+        Student nika = new Student("Nika", nikaSubjects, workerDaysNika);
         Teacher mather = new Teacher("Artur", new Student[]{oleg});
 
-        Group AQA = new Group("AQA Automation",mather,new Student[]{oleg,nika});
+        Group AQA = new Group("AQA Automation", mather, new Student[]{oleg, nika});
 
         System.out.println(math);
         System.out.println(oleg);
