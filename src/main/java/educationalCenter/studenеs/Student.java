@@ -3,12 +3,14 @@ package educationalCenter.studenеs;
 import educationalCenter.Days;
 import educationalCenter.subject.Subject;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Set;
 
 public class Student {
     private String name;
     private String group;
-    private Subject[] subject;
+    private Set<String> subject;
     private Days[] workerDays;
 
     public Student(String name, String group) {
@@ -16,7 +18,7 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String name, Subject[] subject, Days[] workerDays) {
+    public Student(String name, Set<String> subject, Days[] workerDays) {
         this.name = name;
         this.subject = subject;
         this.workerDays = workerDays;
@@ -40,7 +42,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "\n" + "  " + "Students: " + name + " have subjects: " +
-                Arrays.toString(subject);
+        return "\n" + "  " + "Students: " + name + " have subjects: " + subject;
     }
 }
