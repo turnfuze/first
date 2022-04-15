@@ -10,7 +10,7 @@ import java.util.Set;
 public class Student {
     private String name;
     private String group;
-    private Set<String> subject;
+    private Set<Subject> subject;
     private Days[] workerDays;
 
     public Student(String name, String group) {
@@ -18,7 +18,7 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String name, Set<String> subject, Days[] workerDays) {
+    public Student(String name, Set<Subject> subject, Days[] workerDays) {
         this.name = name;
         this.subject = subject;
         this.workerDays = workerDays;
