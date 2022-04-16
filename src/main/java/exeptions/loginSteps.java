@@ -33,7 +33,6 @@ public class loginSteps {
         } else {
             status = false;
         }
-
         return status;
     }
 }

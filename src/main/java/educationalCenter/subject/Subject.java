@@ -36,6 +36,5 @@ public class Subject {
     public String toString() {
         return "\n" +"    "+ subject +" - "+
                 hours + " hours";
-
     }
 }
