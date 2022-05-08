@@ -1,14 +1,16 @@
 package marketplace;
 
+import lombok.AllArgsConstructor;
+
 import java.util.List;
 import java.util.stream.Collectors;
-
+@AllArgsConstructor
 public class ProductMarket {
     private List<Products> products;
 
-    public ProductMarket(List<Products> products) {
-        this.products = products;
-    }
+//    public ProductMarket(List<Products> products) {
+//        this.products = products;
+//    }
 
 //    public List<Products> sortUp(List<Products> array) {
 //        List<Products> sortedList = array.stream().filter(products1 -> products1.getPrice() > 10);
