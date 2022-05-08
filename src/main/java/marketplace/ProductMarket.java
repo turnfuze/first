@@ -8,16 +8,6 @@ import java.util.stream.Collectors;
 public class ProductMarket {
     private List<Products> products;
 
-//    public ProductMarket(List<Products> products) {
-//        this.products = products;
-//    }
-
-//    public List<Products> sortUp(List<Products> array) {
-//        List<Products> sortedList = array.stream().filter(products1 -> products1.getPrice() > 10);
-//        sortedList = products.stream().map(products -> products.getName());
-//        return sortedList;
-//    }
-
     public  static List<String> getAllNames(List<Products> products){
         List<String> namesOfProducts = products.stream().
                 map(product -> product.getName()).
