@@ -20,7 +20,7 @@ public class main {
         ProductMarket products = new ProductMarket(eat1);
 
         System.out.println(products.getAllNames());         //список всех продуктов
-        System.out.println(products.more10());              //отдельно вывожу цены
+        System.out.println(products.returnPriceUsOneString()); //отдельно вывожу отсортированые цены
         System.out.println(products.more10());              // отдельно вывожу отфильтрованые объекты по цене больше 10
         System.out.println(products.getAllNames());         // вывожу имена всех продуктов которые отсортированы а-z
         System.out.println(products.smaller0());            // меньше ноля
