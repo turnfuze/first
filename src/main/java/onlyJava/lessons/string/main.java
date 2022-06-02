@@ -1,3 +1,5 @@
+package onlyJava.lessons.string;
+
 public class main {
     public static void main(String[] args) {
         String str = "String contain aaabb";

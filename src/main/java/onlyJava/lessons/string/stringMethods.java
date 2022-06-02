@@ -1,3 +1,5 @@
+package onlyJava.lessons.string;
+
 import java.util.Scanner;
 
 public class stringMethods {

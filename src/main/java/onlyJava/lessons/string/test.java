@@ -1,3 +1,5 @@
+package onlyJava.lessons.string;
+
 public class test {
     public static void count(String str){
         int num =0;

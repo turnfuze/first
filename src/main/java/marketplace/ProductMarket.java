@@ -4,9 +4,13 @@ import lombok.AllArgsConstructor;
 
 import java.util.List;
 import java.util.stream.Collectors;
-@AllArgsConstructor
+//@AllArgsConstructor
 public class ProductMarket {
     private List<Products> products;
+
+    public ProductMarket(List<Products> products) {
+        this.products = products;
+    }
 
     public List<String> getAllNames() {
         return products.stream()
