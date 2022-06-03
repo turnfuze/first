@@ -1,4 +1,4 @@
-package JUnit;
+package TestNG;
 
 import marketplace.ProductMarket;
 import marketplace.Products;
@@ -53,9 +53,9 @@ public class ProductMarketTest {
     public void isSmaller0() {
         List<Products> prodActual = productMarket.smaller0();
         List<Products> prodExpected = productsList.stream()
-                .filter(prod -> prod.getPrice() < 2)
+                .filter(prod -> prod.getPrice() < 0)
                 .collect(Collectors.toList());
-//        Assertions.assertNull(prodActual);
+
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
