@@ -35,7 +35,6 @@ public class ProductMarketTest {
                 .map(Products::getName)
                 .sorted()
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -45,7 +44,6 @@ public class ProductMarketTest {
         List<Products> prodExpected = productsList.stream()
                 .filter(product -> product.getPrice() > 10)
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -55,7 +53,6 @@ public class ProductMarketTest {
         List<Products> prodExpected = productsList.stream()
                 .filter(prod -> prod.getPrice() < 0)
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -65,7 +62,6 @@ public class ProductMarketTest {
         List<?> prodExpected = productsList.stream()
                 .map(product -> product.getPrice())
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -75,7 +71,6 @@ public class ProductMarketTest {
         List<?> prodExpected = productsList.stream()
                 .map(product -> product.getPrice())
                 .sorted().collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 }
