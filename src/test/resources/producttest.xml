@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Market" verbose="1">
+
+    <test name="Smoke of market">
+        <groups>
+            <define name="smoke"/>
+            <define name="regression"/>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="JUnit.ProductMarketTest"/>
+        </classes>
+    </test>
+
+<!--    <test name="smoke">-->
+<!--        <classes>-->
+<!--            <class name="JUnit.ProductMarketTest">-->
+<!--                <methods>-->
+<!--                    <include name="isAllNameOfProduct"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Regresion">-->
+<!--        <classes>-->
+<!--            <class name="JUnit.ProductMarketTest">-->
+<!--                <methods>-->
+<!--                    <include name="isMore10()"/>  &lt;!&ndash; запуск только этот метод  &ndash;&gt;-->
+<!--                    <exclude name="isAllNameOfProduct"/> &lt;!&ndash;запуск всех методов кроме этого метода  &ndash;&gt;-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+</suite>
