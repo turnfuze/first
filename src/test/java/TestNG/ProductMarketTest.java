@@ -1,4 +1,4 @@
-package JUnit;
+package TestNG;
 
 import marketplace.ProductMarket;
 import marketplace.Products;
@@ -35,7 +35,6 @@ public class ProductMarketTest {
                 .map(Products::getName)
                 .sorted()
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -45,7 +44,6 @@ public class ProductMarketTest {
         List<Products> prodExpected = productsList.stream()
                 .filter(product -> product.getPrice() > 10)
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -53,9 +51,8 @@ public class ProductMarketTest {
     public void isSmaller0() {
         List<Products> prodActual = productMarket.smaller0();
         List<Products> prodExpected = productsList.stream()
-                .filter(prod -> prod.getPrice() < 2)
+                .filter(prod -> prod.getPrice() < 0)
                 .collect(Collectors.toList());
-//        Assertions.assertNull(prodActual);
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -65,7 +62,6 @@ public class ProductMarketTest {
         List<?> prodExpected = productsList.stream()
                 .map(product -> product.getPrice())
                 .collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 
@@ -75,7 +71,6 @@ public class ProductMarketTest {
         List<?> prodExpected = productsList.stream()
                 .map(product -> product.getPrice())
                 .sorted().collect(Collectors.toList());
-
         Assertions.assertEquals(prodActual, prodExpected);
     }
 }

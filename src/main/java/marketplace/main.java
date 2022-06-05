@@ -2,9 +2,6 @@ package marketplace;
 
 import java.util.List;
 
-import marketplace.ProductMarket;
-import marketplace.ProductMarket.*;
-
 public class main {
     public static void main(String[] args) {
         Products water = new Products("Bottle of water", 12);
