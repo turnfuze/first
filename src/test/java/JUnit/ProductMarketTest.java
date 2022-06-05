@@ -2,20 +2,20 @@ package JUnit;
 
 import marketplace.ProductMarket;
 import marketplace.Products;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.testng.Assert.assertEquals;
+
 public class ProductMarketTest {
-    private static Products product;
     private static ProductMarket productMarket;
     private static List<Products> productsList;
 
-    @BeforeAll
-    public static void createObject() {
+    @BeforeSuite(alwaysRun = true)
+    public void createObject() {
+        System.out.println("BeforeSuite");
         Products water = new Products("Bottle of water", 12);
         Products bread = new Products("Bread", 3);
         Products milk = new Products("Milk", 2);
@@ -28,6 +28,8 @@ public class ProductMarketTest {
         productMarket = new ProductMarket(productsList);
     }
 
+
+
     @Test
     public void isAllNameOfProduct() {
         List<String> prodActual = productMarket.getAllNames();
@@ -35,38 +37,35 @@ public class ProductMarketTest {
                 .map(Products::getName)
                 .sorted()
                 .collect(Collectors.toList());
-
-        Assertions.assertEquals(prodActual, prodExpected);
+        assertEquals(prodActual, prodExpected);
     }
 
-    @Test
+    @Test (groups = {"smoke"})
     public void isMore10() {
+        System.out.println("isMore10");
         List<Products> prodActual = productMarket.more10();
         List<Products> prodExpected = productsList.stream()
                 .filter(product -> product.getPrice() > 10)
                 .collect(Collectors.toList());
-
-        Assertions.assertEquals(prodActual, prodExpected);
+        assertEquals(prodActual, prodExpected);
     }
 
     @Test
     public void isSmaller0() {
         List<Products> prodActual = productMarket.smaller0();
         List<Products> prodExpected = productsList.stream()
-                .filter(prod -> prod.getPrice() < 2)
+                .filter(prod -> prod.getPrice() < 0)
                 .collect(Collectors.toList());
-//        Assertions.assertNull(prodActual);
-        Assertions.assertEquals(prodActual, prodExpected);
+        assertEquals(prodActual, prodExpected);
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void isReturnPriceUsString() {
         List<?> prodActual = productMarket.returnPriceUsString();
         List<?> prodExpected = productsList.stream()
                 .map(product -> product.getPrice())
                 .collect(Collectors.toList());
-
-        Assertions.assertEquals(prodActual, prodExpected);
+        assertEquals(prodActual, prodExpected);
     }
 
     @Test
@@ -75,7 +74,6 @@ public class ProductMarketTest {
         List<?> prodExpected = productsList.stream()
                 .map(product -> product.getPrice())
                 .sorted().collect(Collectors.toList());
-
-        Assertions.assertEquals(prodActual, prodExpected);
+        assertEquals(prodActual, prodExpected);
     }
 }
