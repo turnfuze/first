@@ -16,26 +16,4 @@
         </classes>
     </test>
 
-<!--    <test name="smoke">-->
-<!--        <classes>-->
-<!--            <class name="JUnit.ProductMarketTest">-->
-<!--                <methods>-->
-<!--                    <include name="isAllNameOfProduct"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    <test name="Regresion">-->
-<!--        <classes>-->
-<!--            <class name="JUnit.ProductMarketTest">-->
-<!--                <methods>-->
-<!--                    <include name="isMore10()"/>  &lt;!&ndash; запуск только этот метод  &ndash;&gt;-->
-<!--                    <exclude name="isAllNameOfProduct"/> &lt;!&ndash;запуск всех методов кроме этого метода  &ndash;&gt;-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
-
 </suite>
